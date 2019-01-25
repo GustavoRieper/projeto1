@@ -25,7 +25,8 @@ return [
             'enabled' => true,
 
             /**
-             * Enables or disables the strict mode. If the strict mode is enabled, any error will throw an exception,
+             * Enables or disables the strict mode.
+             * If the strict mode is enabled, any error will throw an exception,
              * otherwise all errors will be added to the report (and shown in the toolbar).
              *
              * Expects: bool
@@ -34,7 +35,8 @@ return [
             'strict' => true,
 
             /**
-             * If enabled, the profiler tries to flush the content before the it starts collecting data. This option
+             * If enabled, the profiler tries to flush the content before the it starts collecting data.
+             * This option
              * will be ignored if the Toolbar is enabled.
              *
              * Note: The flush listener listens to the MvcEvent::EVENT_FINISH event with a priority of -9400. You have
@@ -65,18 +67,20 @@ return [
             'matcher' => [],
 
             /**
-             * Contains a list with all collector the profiler should run. Zend Developer Tools ships with
+             * Contains a list with all collector the profiler should run.
+             * Zend Developer Tools ships with
              * 'db' (Zend\Db), 'time', 'event', 'memory', 'exception', 'request' and 'mail' (Zend\Mail). If you wish to
              * disable a default collector, simply set the value to null or false.
              *
              * Example: 'collectors' => array('db' => null)
              * Expects: array
              */
-            'collectors' => [],
+            'collectors' => []
         ],
         'events' => [
             /**
-             * Set to true to enable event-level logging for collectors that will support it. This enables a wildcard
+             * Set to true to enable event-level logging for collectors that will support it.
+             * This enables a wildcard
              * listener onto the shared event manager that will allow profiling of user-defined events as well as the
              * built-in ZF events.
              *
@@ -86,7 +90,8 @@ return [
             'enabled' => true,
 
             /**
-             * Contains a list with all event-level collectors that should run. Zend Developer Tools ships with 'time'
+             * Contains a list with all event-level collectors that should run.
+             * Zend Developer Tools ships with 'time'
              * and 'memory'. If you wish to disable a default collector, simply set the value to null or false.
              *
              * Example: 'collectors' => array('memory' => null)
@@ -95,14 +100,15 @@ return [
             'collectors' => [],
 
             /**
-             * Contains event identifiers used with the event listener. Zend Developer Tools defaults to listen to all
+             * Contains event identifiers used with the event listener.
+             * Zend Developer Tools defaults to listen to all
              * events. If you wish to disable the default all-inclusive identifier, simply set the value to null or
              * false.
              *
              * Example: 'identifiers' => array('all' => null, 'dispatchable' => 'Zend\Stdlib\DispatchableInterface')
              * Expects: array
              */
-            'identifiers' => [],
+            'identifiers' => []
         ],
         /**
          * General Toolbar settings
@@ -142,23 +148,24 @@ return [
             'version_check' => false,
 
             /**
-             * Contains a list with all collector toolbar templates. The name  of the array key must be same as the name
+             * Contains a list with all collector toolbar templates.
+             * The name of the array key must be same as the name
              * of the collector.
              *
              * Example: 'profiler' => array(
-             *  'collectors' => array(
-             *      // My_Collector_Example::getName() -> mycollector
-             *      'MyCollector' => 'My_Collector_Example',
-             *  )
+             * 'collectors' => array(
+             * // My_Collector_Example::getName() -> mycollector
+             * 'MyCollector' => 'My_Collector_Example',
+             * )
              * ),
              * 'toolbar' => array(
-             *  'entries' => array(
-             *      'mycollector' => 'example/toolbar/my-collector',
-             *  )
+             * 'entries' => array(
+             * 'mycollector' => 'example/toolbar/my-collector',
+             * )
              * ),
              * Expects: array
              */
-            'entries' => [],
-        ],
-    ],
+            'entries' => []
+        ]
+    ]
 ];

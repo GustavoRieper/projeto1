@@ -17,14 +17,14 @@ return [
         // Module class.
         'module_paths' => [
             './module',
-            './vendor',
+            './vendor'
         ],
 
         // An array of paths from which to glob configuration files after
         // modules are loaded. These effectively override configuration
         // provided by modules themselves. Paths may use GLOB_BRACE notation.
         'config_glob_paths' => [
-            realpath(__DIR__) . '/autoload/{{,*.}global,{,*.}local}.php',
+            realpath(__DIR__) . '/autoload/{{,*.}global,{,*.}local}.php'
         ],
 
         // Whether or not to enable a configuration cache.
@@ -44,22 +44,22 @@ return [
         'module_map_cache_key' => 'application.module.cache',
 
         // The path in which to cache merged configuration.
-        'cache_dir' => 'data/cache/',
+        'cache_dir' => 'data/cache/'
 
         // Whether or not to enable modules dependency checking.
         // Enabled by default, prevents usage of modules that depend on other modules
         // that weren't loaded.
         // 'check_dependencies' => true,
-    ],
+    ]
 
     // Used to create an own service manager. May contain one or more child arrays.
     // 'service_listener_options' => [
-    //     [
-    //         'service_manager' => $stringServiceManagerName,
-    //         'config_key'      => $stringConfigKey,
-    //         'interface'       => $stringOptionalInterface,
-    //         'method'          => $stringRequiredMethodName,
-    //     ],
+    // [
+    // 'service_manager' => $stringServiceManagerName,
+    // 'config_key' => $stringConfigKey,
+    // 'interface' => $stringOptionalInterface,
+    // 'method' => $stringRequiredMethodName,
+    // ],
     // ],
 
     // Initial configuration with which to seed the ServiceManager.
